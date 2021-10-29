@@ -1,27 +1,19 @@
 # AppClients
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
+## Projeto em Angular 12
+
+Criado como desafio do curso https://www.udemy.com/course/full-stack-angular9-spring-boot/ este projeto consiste na criação de um dashboard 
+e CRUD para manusear os clientes cadastrados e seus serviços.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Para ver o projeto rodando digite `ng serve` no terminal dentr da pasta do projeto e abra seu browser na pagina `http://localhost:4200/`.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Logo apos baixar o projeto  digite o comando `ng build` para que o node faça o build do projeto. Os arquivos da build ficarao armazenados 
+na pasta `dist/` do projeto.
 
-## Running unit tests
+## Para mais duvidas sobre o Angular
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Use `ng help` e voce sera redirecionado para a pagina oficial do angular [Angular CLI Overview and Command Reference](https://angular.io/cli).
