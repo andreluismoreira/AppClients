@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ClientsModule } from './clients/clients.module';
 
 import { TemplateModule } from './template/template.module';
 
@@ -13,7 +14,8 @@ import { TemplateModule } from './template/template.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    TemplateModule
+    TemplateModule,
+    ClientsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
