@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     ClientsRoutingModule,
     FormsModule
+
   ], exports: [
     ClientsFormComponent
   ]
