@@ -3,19 +3,21 @@
         <li class="breadcrumb-item active">Formulario de cadastro</li>
     </ol>     
     <div class="container">
-        <form>
+        <form #clientForm="ngForm" (ngSubmit)="onSubmit()">
             <div class="row">
                 <div class="col-md-6">
                     <div class="form-group">
                         <label>Id:</label>
-                        <input type="text" class="form-control" disabled="true">
+                        <input type="text" class="form-control" disabled="true"
+                        name="id" [ngModel] ="client.id">
                     </div>
                 </div>
 
                 <div class="col-md-6">
                     <div class="form-group">
                         <label>Data de cadastro:</label>
-                        <input type="text" class="form-control" disabled="true">
+                        <input type="text" class="form-control" disabled="true"
+                        name ="dataCadastro" [ngModel] ="client.dataCadastro">
                     </div>
                 </div>
             </div>
@@ -23,20 +25,22 @@
                 <div class="col-md-6">
                     <div class="form-group">
                         <label>*Nome:</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" name="nome"
+                        [(ngModel)]="client.nome">
                     </div>
                 </div>
 
                 <div class="col-md-6">
                     <div class="form-group">
                         <label>*CPF:</label>
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" name="cpf"
+                        [(ngModel)]="client.cpf">
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-2">
-                  <button type="submit" class="btn btn-success">
+                  <button type="submit" class="btn btn-success" >
                       <i class="fa fa-save"></i> Salvar
                   </button>
                 </div>

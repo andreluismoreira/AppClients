@@ -9,9 +9,15 @@ import { Clients } from '../clients';
 export class ClientsFormComponent implements OnInit {
 
   client!: Clients
-  constructor( ) { }
+
+  constructor() { 
+    this.client = new Clients();
+  }
 
   ngOnInit(): void {
   }
 
+  onSubmit(){
+    console.log(this.client)
+  }
 }
