@@ -8,9 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class ClientsService {
 
-  constructor(private http: HttpClient) { 
-
-  }
+  constructor(private http: HttpClient) {}
 
   salvar(clients:Clients):Observable<Clients>{
     return this.http.post<Clients>('http://localhost:8080/api/clientes', clients);
@@ -28,5 +26,7 @@ export class ClientsService {
     return this.http.get<any>(`http://localhost:8080/api/clientes/${id}`);
   }
 
-
+  delete(clients:Clients):Observable<any>{
+    return this.http.delete<any>(`http://localhost:8080/api/clientes/${clients.id}`);
+  }
 }
