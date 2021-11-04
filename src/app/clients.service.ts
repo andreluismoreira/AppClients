@@ -13,10 +13,20 @@ export class ClientsService {
   }
 
   salvar(clients:Clients):Observable<Clients>{
-    return this.http.post<Clients>('http://localhost:8080/api/clientes', clients)
+    return this.http.post<Clients>('http://localhost:8080/api/clientes', clients);
   }
 
-   getCliente():Observable<Clients[]>{
+  atualizar(clients:Clients):Observable<any>{
+    return this.http.put<Clients>(`http://localhost:8080/api/clientes/${clients.id}`, clients);
+  }
+
+  getCliente():Observable<Clients[]>{
     return this.http.get<Clients[]>('http://localhost:8080/api/clientes');
   }
+
+  getClientById(id:string):Observable<Clients>{
+    return this.http.get<any>(`http://localhost:8080/api/clientes/${id}`);
+  }
+
+
 }
