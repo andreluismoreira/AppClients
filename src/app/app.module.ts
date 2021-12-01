@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ClientsService } from './clients.service';
 import { ClientsModule } from './clients/clients.module';
+import { ProvidedServiceModule} from './provided-service/provided-service.module'
 
 import { TemplateModule } from './template/template.module';
 
@@ -18,7 +19,8 @@ import { TemplateModule } from './template/template.module';
     HttpClientModule,
     AppRoutingModule,
     TemplateModule,
-    ClientsModule
+    ClientsModule,
+    ProvidedServiceModule
   ],
   providers: [
     ClientsService
