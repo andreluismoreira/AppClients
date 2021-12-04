@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ClientsService } from './clients.service';
 import { ClientsModule } from './clients/clients.module';
 import { ProvidedServiceModule} from './provided-service/provided-service.module'
+import { ProvidedServiceService} from'./provided-service.service'
 
 import { TemplateModule } from './template/template.module';
 
@@ -23,7 +24,8 @@ import { TemplateModule } from './template/template.module';
     ProvidedServiceModule
   ],
   providers: [
-    ClientsService
+    ClientsService,
+    ProvidedServiceService
   ],
   bootstrap: [AppComponent]
 })
