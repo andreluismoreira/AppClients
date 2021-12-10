@@ -1,6 +1,6 @@
 # Vendas
 
-## Projeto em Java + SpringBoot
+## Projeto em Java 11 + SpringBoot
 
 Criado como desafio do curso https://www.udemy.com/course/full-stack-angular9-spring-boot/ este projeto consiste na criação de um dashboard 
 e CRUD para manusear os clientes cadastrados e seus serviços.
