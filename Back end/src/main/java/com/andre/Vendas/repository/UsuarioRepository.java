@@ -1,4 +1,4 @@
-package com.andre.Vendas.controller;
+package com.andre.Vendas.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
