@@ -7,7 +7,7 @@ e CRUD para manusear os clientes cadastrados e seus serviços.
 
 ## Development server
 
-Para ver o projeto rodando digite `ng serve` no terminal dentr da pasta do projeto e abra seu browser na pagina `http://localhost:4200/`.
+Para ver o projeto rodando digite `ng serve` no terminal dentro da pasta do projeto e abra seu browser na pagina `http://localhost:4200/`.
 
 ## Build
 
