@@ -26,7 +26,7 @@ export class ClientsListComponent implements OnInit {
   }
 
   novoClient(){
-    this.router.navigate(['/clients-form'])
+    this.router.navigate(['/clients/form'])
   }
 
   preparaDelecao(clients:Clients){
