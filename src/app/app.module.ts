@@ -10,14 +10,18 @@ import { ProvidedServiceModule} from './provided-service/provided-service.module
 import { ProvidedServiceService} from'./provided-service.service'
 
 import { TemplateModule } from './template/template.module';
+import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,    
+    LoginComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
+    FormsModule,
     AppRoutingModule,
     TemplateModule,
     ClientsModule,
