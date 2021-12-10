@@ -5,8 +5,8 @@ import { LoginComponent } from './login/login.component';
 import { LayoutComponent } from './layout/layout.component';
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent },
-  { path: '', component: LayoutComponent, children: [
+  { path: '', component: LoginComponent },
+  { path: 'home', component: LayoutComponent, children: [
       { path: 'home', component: HomeComponent }
      ]
   }
