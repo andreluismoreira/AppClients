@@ -21,7 +21,7 @@
                     <select class="form-control"
                         [ngModelOptions]="{standalone:true}"
                         [(ngModel)]="servico.idCliente">
-                        <option value="">Selecione...</option>
+                        <option value="">Selecione um cliente</option>
                         <option *ngFor="let Cliente of clients" 
                             [ngValue]="Cliente.id" >
                             {{Cliente.nome}}
@@ -36,7 +36,9 @@
                         <label>Descrição:</label>
                         <input class="form-control" 
                         [(ngModel)]="servico.descricao"
-                        type="text" name="descricao" id="inputDescricao">
+                        type="text" name="descricao"
+                         id="inputDescricao"
+                         placeholder="Descreva aqui o serviço">
                     </div>
                 </div>
         </div>
@@ -46,7 +48,8 @@
                     <label>Data:</label>
                     <input class="form-control" 
                     [(ngModel)]="servico.data" 
-                    type="text" name="data" id="inputData">
+                    type="text" name="data" id="inputData"
+                    placeholder="Data do servico no formato DD/MM/YYYY">
                 </div>
             </div>
             <div class="col-md-6">
@@ -54,7 +57,8 @@
                     <label>Valor:</label>
                     <input class="form-control" 
                     [(ngModel)]="servico.preco"
-                    type="text" name="preco" id="inputPreco">
+                    type="text" name="preco" id="inputPreco"
+                    placeholder="Digite o valor do serviço">
                 </div>
             </div>
         </div>

@@ -1,1 +1,36 @@
-<p>provided-service-list works!</p>
+<h1 class="mt-04">Serviço Prestado</h1>
+<ol class="breadcrumb mb-04">
+    <li class="breadcrumb-bitem active">Consulta</li>
+</ol>
+
+<div class="container" >
+    <form #consultaForm="ngForm" (submit)="consultar()">
+        <div class="div row">
+            <div class="div col-md-6">
+                <label for="inputNome">Nome Cliente:</label>
+                    <input type="text" [(ngModel)]="nome"
+                           name="nome" class="form-control"
+                           id="inputNome"
+                           placeholder="Digite o nome do cliente">
+            </div>
+
+            <div class="div col-md-6">
+                <label for="inputMes">Mês:</label>
+                    <select [(ngModel)]="mes" class="form-control" name="mes">
+                       <option value="">Selecione um mês</option> 
+                       <option *ngFor="let mes of meses" [value]="mes">
+                           {{mes}}
+                       </option> 
+                    </select>
+            </div>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="col-md-3">
+                <button type="submit" class="btn btn-primary">
+                    <i class="fa fa-search"></i> Consultar
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
