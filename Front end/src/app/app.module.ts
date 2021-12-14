@@ -13,6 +13,7 @@ import { TemplateModule } from './template/template.module';
 import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { LayoutComponent } from './layout/layout.component';
+import { AuthService } from './auth.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { LayoutComponent } from './layout/layout.component';
   ],
   providers: [
     ClientsService,
-    ProvidedServiceService
+    ProvidedServiceService,
+    AuthService
   ],
   bootstrap: [AppComponent]
 })

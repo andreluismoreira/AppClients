@@ -6,6 +6,9 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
+
 @Entity
 public class Usuario {
 	
@@ -14,9 +17,11 @@ public class Usuario {
 	private Integer id;
 	
 	@Column(unique = true, name ="login")
+	@NotEmpty(message ="{campo.login.obrigatorio}")
 	private String username;
 	
-	@Column(name = "senha")
+	@Column(name = "password")
+	@NotEmpty(message ="{campo.password.obrigatorio}")
 	private String password;
 
 	public Usuario(Integer id, String username, String password) {
