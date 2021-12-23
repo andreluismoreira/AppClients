@@ -14,38 +14,18 @@ export class ClientsService {
   constructor(private http: HttpClient) {}
 
   salvar(clients:Clients):Observable<Clients>{
-    const tokenString = localStorage.getItem('access_token')!
-    const token = JSON.parse(tokenString)
-    const headers = {
-        'Authorization' : 'Bearer ' + token.access_token
-    }
-    return this.http.post<Clients>(`${this.apiURL}`, clients, {headers});
+    return this.http.post<Clients>(`${this.apiURL}`, clients);
   }
 
   atualizar(clients:Clients):Observable<any>{
-    const tokenString = localStorage.getItem('access_token')!
-    const token = JSON.parse(tokenString)
-    const headers = {
-        'Authorization' : 'Bearer ' + token.access_token
-    }
-    return this.http.put<Clients>(`${this.apiURL}/${clients.id}`, clients,{headers});
+    return this.http.put<Clients>(`${this.apiURL}/${clients.id}`, clients);
   }
 
   getCliente():Observable<Clients[]>{
-    const tokenString = localStorage.getItem('access_token')!
-    const token = JSON.parse(tokenString)
-    const headers = {
-        'Authorization' : 'Bearer ' + token.access_token
-    }
-    return this.http.get<Clients[]>(this.apiURL, {headers});
+    return this.http.get<Clients[]>(this.apiURL);
   }
   getClientById(id:string):Observable<Clients>{
-    const tokenString = localStorage.getItem('access_token')!
-    const token = JSON.parse(tokenString)
-    const headers = {
-        'Authorization' : 'Bearer ' + token.access_token
-    }
-    return this.http.get<any>(`${this.apiURL}/${id}`, {headers});
+    return this.http.get<any>(`${this.apiURL}/${id}`);
   }
 
   delete(clients:Clients):Observable<any>{
