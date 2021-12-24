@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthService } from 'src/app/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,12 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent  {
 
-  constructor() { }
+  usuario!:string;
+
+  constructor(private service: AuthService) { }
 
   ngOnInit(): void {
+    this.usuario = this.service.getusuarioAutenticado();
   }
 
 }
