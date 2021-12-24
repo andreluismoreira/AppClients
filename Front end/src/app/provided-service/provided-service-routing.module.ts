@@ -3,11 +3,12 @@ import { Routes, RouterModule } from "@angular/router";
 import { LayoutComponent } from "../layout/layout.component";
 import { ProvidedServiceFormComponent } from "./provided-service-form/provided-service-form.component";
 import { ProvidedServiceListComponent } from "./provided-service-list/provided-service-list.component";
+import { AuthGuard } from "../auth.guard";
 
 const routes: Routes = [
     {
     path:'provided-service',
-    component: LayoutComponent,
+    component: LayoutComponent, canActivate: [AuthGuard],
     children:[
         {
             path:'form',
